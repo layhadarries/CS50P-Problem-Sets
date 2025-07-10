@@ -2,8 +2,7 @@ text = input()
 
 
 def main(text):
-    indoor = text.lower()
-    return indoor
+    return text.lower()
 
 
 print(main(text))

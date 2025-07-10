@@ -2,8 +2,7 @@ text = input()
 
 
 def main(text):
-    text_split = text.split()
-    return text_split
+    return text.split()
 
 
 print('...'.join(main(text)))

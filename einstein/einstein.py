@@ -7,8 +7,7 @@ light = 300000000
 
 
 def main(mass):
-    energy = mass * light ** 2
-    return energy
+    return mass * light ** 2
 
 
 print("e: " + str(main(mass)))
