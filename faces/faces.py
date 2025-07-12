@@ -1,8 +1,5 @@
-text = input()
+def convert():
+    text = input()
+    print text.replace(":)", "🙂").replace(":(", "🙁")
 
-
-def convert(text):
-    return text.replace(":)", "🙂").replace(":(", "🙁")
-
-
-print(convert(text))
+convert()
