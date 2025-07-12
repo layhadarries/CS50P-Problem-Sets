@@ -3,7 +3,7 @@ def convert(emoji):
 
 def main()
     text = input()
-    print(conver(text))
+    print(convert(text))
 
 
 main()
