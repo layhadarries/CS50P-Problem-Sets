@@ -1,8 +1,5 @@
-text = input()
-
-
-def main(text):
-    return text.split()
-
-
-print('...'.join(main(text)))
+def main():
+    text = input()
+    print('...'.join(text.split())
+          
+main()
