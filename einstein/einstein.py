@@ -1,13 +1,11 @@
-"""
-energy = mass * 300000000 **2
-"""
+c = 300000000            #speed of light
 
-mass = int(input("m: "))
-light = 300000000
+def energy(m):
+    return m * c ** 2
 
+def main():
+    m = int(input("m: "))
+    e = energy(m)
+    print("e: " + str(e))
 
-def main(mass):
-    return mass * light ** 2
-
-
-print("e: " + str(main(mass)))
+main()
