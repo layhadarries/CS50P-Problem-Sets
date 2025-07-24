@@ -13,28 +13,3 @@ def main():
 
 
 main()
-
-'''
-def camel_to_snake(name):
-    """Convert a camelCase string to snake_case."""
-    result = []
-
-    for char in name:
-        if char.isupper():
-            result.append('_')
-            result.append(char.lower())
-        else:
-            result.append(char)
-
-    return ''.join(result)
-
-
-def main():
-    camel = input("camelCase: ")
-    snake = camel_to_snake(camel)
-    print("snake_case:", snake)
-
-
-if __name__ == "__main__":
-    main()
-'''
