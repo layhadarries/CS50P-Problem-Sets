@@ -14,7 +14,7 @@ def main():
         else:
             print(f"Amount Due: {amount_due}")  #   If you input is not found in coins, print the amount due
 
-        if amount_due > 0:                      #
+        if amount_due > 0:                      
             print(f"Amount Due: {amount_due}")
 
         elif amount_due == 0:
