@@ -1,6 +1,6 @@
 def main():
 
-    d = {"apple": "130",
+    item = {"apple": "130",
          "avacado": "50",
          "banana": "110",
          "cantaloupe": "50",
@@ -21,10 +21,10 @@ def main():
          "tangerine": "50",
          "watermelon": "80"}
 
-    x = input("Item: ").lower().strip()
+    text = input("Item: ").lower().strip()
 
-    if x in d:
-        print(f"Calories: {d[x]}")
+    if text in item:
+        print(f"Calories: {item[text]}")
 
 
 main()
