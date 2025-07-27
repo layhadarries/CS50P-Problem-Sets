@@ -1,12 +1,18 @@
 def main():
-
     text = input("Input: ")
     vowels = ["a", "e", "i", "o", "u"]
+    new_txt = ''
 
     for char in text:
-        if char.lower() in vowels:
-            text = text.replace(char, "")
-    print(f"Output: {x}")
+        if char not in vowels:
+            new_txt += char
+        else:
+            continue
+
+    print(new_txt)
 
 
 main()
+
+check50 cs50/problems/2022/python/twttr
+submit50 cs50/problems/2022/python/twttr

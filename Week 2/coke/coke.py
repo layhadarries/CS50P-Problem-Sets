@@ -1,26 +1,28 @@
 def main():
+
     coins = {
-    "25": 25,
-    "10": 10,
-    "5": 5
-}
+        "25": 25,
+        "10": 10,
+        "5": 5
+    }
 
     amount_due = 50
 
-    while amount_due > 0:                       #   This function runs until amount due is 0
-        text = input("Insert Coin: ")
-        if text in coins:                       #   If the value inserted is in the coins dictionary
-            amount_due -= coins[text]           #   amount due = 50 - the coin found in text
-        else:
-            print(f"Amount Due: {amount_due}")  #   If you input is not found in coins, print the amount due
+    while amount_due > 0:
+        text = input("Insert coin: ")\
 
-        if amount_due > 0:                      #
-            print(f"Amount Due: {amount_due}")
+        if text in coins:
+            amount_due -= coins[text]
+
+        if amount_due > 0:
+            print(f'Amount due: {amount_due}')
 
         elif amount_due == 0:
-            print("Change Owed: 0")
+            print('Change owed: 0')
 
         else:
-            print(f"Change Owed: {-amount_due}")
+            change = -amount_due - coins[text]
+            print(f'Change owed: {abs(change)}')
+
 
 main()

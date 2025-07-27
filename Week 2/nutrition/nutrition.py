@@ -1,30 +1,35 @@
 def main():
 
-    d = {"apple": "130",
-         "avacado": "50",
-         "banana": "110",
-         "cantaloupe": "50",
-         "grapefruit": "60",
-         "grapes": "90",
-         "honeydew melon": "50",
-         "kiwifruit": "90",
-         "lemon": "15",
-         "lime": "20",
-         "nectarine": "60",
-         "orange": "80",
-         "peach": "60",
-         "pear": "100",
-         "pineapple": "50",
-         "plums": "70",
-         "strawberries": "50",
-         "sweet cherries": "100",
-         "tangerine": "50",
-         "watermelon": "80"}
+    fruits = {
+        "apple": "130",
+        "avacado": "50",
+        "banana": "110",
+        "cantaloupe": "50",
+        "grapefruit": "60",
+        "grapes": "90",
+        "honeydew melon": "50",
+        "kiwifruit": "90",
+        "lemon": "15",
+        "lime": "20",
+        "nectarine": "60",
+        "orange": "80",
+        "peach": "60",
+        "pear": "100",
+        "pineapple": "50",
+        "plums": "70",
+        "strawberries": "50",
+        "sweet cherries": "100",
+        "tangerine": "50",
+        "watermelon": "80"
+    }
 
-    x = input("Item: ").lower().strip()
+    text = input("Item: ").lower().strip()
 
-    if x in d:
-        print(f"Calories: {d[x]}")
+    if text in fruits:
+        print(f'Calories: {fruits[text]}')      # Prints the value of the key
 
 
 main()
+
+#   check50 cs50/problems/2022/python/nutrition
+#   submit50 cs50/problems/2022/python/nutrition
