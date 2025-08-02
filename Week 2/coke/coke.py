@@ -17,6 +17,9 @@ def main():
         if amount_due > 0:
             print(f'Amount due: {amount_due}')
 
+        if amount_due > 0:
+            print(f"Amount Due: {amount_due}")
+
         elif amount_due == 0:
             print('Change owed: 0')
 

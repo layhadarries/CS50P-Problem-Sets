@@ -13,6 +13,3 @@ def main():
 
 
 main()
-
-# check50 cs50/problems/2022/python/coke
-# submit50 cs50/problems/2022/python/coke
