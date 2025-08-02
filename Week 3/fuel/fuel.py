@@ -30,7 +30,7 @@ def get_percentage():
 
             return round(x / y * 100)  # round() handles floats
 
-        # Error is raised if the input is NOT an int or anything else
+        # Error is raised if the input is NOT an int
         except (ValueError, ZeroDivisionError):
             pass  # test return
 
