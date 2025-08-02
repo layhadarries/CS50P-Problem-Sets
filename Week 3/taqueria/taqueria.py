@@ -21,12 +21,9 @@ def main():
                 # :.2f prints the float in 2 decimals
                 print(f'Total: ${total:.2f}')
 
-        except EOFError:  # Control Z ONLY
+        except EOFError:  # Ctrl Z or Ctrl D
             print("\n")
             break
 
 
 main()
-
-# check50 cs50/problems/2022/python/taqueria
-# submit50 cs50/problems/2022/python/taqueria
