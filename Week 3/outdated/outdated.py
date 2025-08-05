@@ -1,4 +1,4 @@
-def main():
+ddef main():
     months = [
         "January",
         "February",
@@ -19,31 +19,26 @@ def main():
             text = input("Date: ").strip()
     
             if "/" in text:     # if input is "mm/dd/yyyy"
-                try:
-                    mm, dd, yyyy = map(int, date.split("/"))
+                mm, dd, yyyy = map(int, date.split("/"))
                 #   mm, dd, yyyy = text.split("/")     mm = int(mm)   dd = int(dd)
 
-                    # Day and Month parameters, condition set to break the loop
-                    if (dd >= 1 and dd <= 31) and (mm >= 1 and mm <= 12):
-                        break   # End the loop so that it only prints once!!
-
-                except ValueError:
-                    continue
-
             elif "," in text:  # If input is "month in months dd, yyyy"
-                try:
-                    mm_text, dd, yyyy = text.replace(",", "").split(" ")
-                    dd = int(dd)
-                    mm = months.index(mm_text, 0) + 1
+                mm_text, dd, yyyy = text.replace(",", "").split(" ")
+                dd = int(dd)
+                yyyy = int(yyyy)
+                mm = months.index(mm_text, 0) + 1
 
-                    # Day parameters, condition set to break the loop
-                    if dd >= 1 and dd <= 31:
-                        break
+            else:
+                continue
 
-                except ValueError, IndexError:
-                    continue
+            # Day and Month parameters, condition set to break the loop
+            if (dd >= 1 and dd <= 31) and (mm >= 1 and mm <= 12):
+                print(f'{yyyy}-{mm:02}-{dd:02}')
+                break   # End the loop so that it only prints once!!
 
-    print(f'{yyyy}-{mm:02}-{dd:02}')
+        except ValueError, IndexError:
+            continue
 
 
 main()
+
