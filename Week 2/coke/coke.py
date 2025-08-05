@@ -9,7 +9,7 @@ def main():
     amount_due = 50
 
     while amount_due > 0:
-        text = input("Insert coin: ")\
+        text = input("Insert coin: ")
 
         if text in coins:
             amount_due -= coins[text]
