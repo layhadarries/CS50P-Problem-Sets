@@ -21,9 +21,9 @@ def main():
                 # :.2f prints the float in 2 decimals
                 print(f'Total: ${total:.2f}')
 
-        except EOFError:  # Ctrl Z or Ctrl D
+        except EOFError:  # Ctrl Z
             print("\n")
             break
 
-
-main()
+if __name__ == "__main__":
+    main()
