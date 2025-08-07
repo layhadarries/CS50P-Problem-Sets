@@ -13,13 +13,18 @@ def get_percentage():
     while True:
         try:
             text = input("Fraction: ")
-            x, y = map(int, text.split("/"))
+            num, denom = text.split("/")
 
-            if x < 0:
-                continue
+            # Converts string into int. Need it to check if the input is not an int
+            x = int(num)
+            y = int(denom)
 
-            if y == 0 or y < 0 or x > y:
-                continue
+            if y == 0:
+                raise ZeroDivisionError()
+            if y < 0:
+                raise ValueError()
+            if x > y:
+                raise ValueError()
 
             return round(x / y * 100)  # round() handles floats
 

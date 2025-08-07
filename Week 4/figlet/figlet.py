@@ -26,6 +26,21 @@ def main():
         sys.exit("Invalid usage")
 
     text = input("Input: ")
+
+    # Must begin with "-f" and contain exatcly 3 arguments
+    if len(sys.argv) != 3 or sys.argv[1] != "-f":
+        sys.exit("Invalid usage")
+
+    font = sys.argv[2]
+    figlet = Figlet()
+
+    # Must contain a valid font
+    if font not in figlet.getFonts():
+        sys.exit("Invalid usage")
+
+    text = input("Input: ")
+    figlet.setFont(font=font)
+
     print("Output:")
     print(figlet.renderText(text))
 
