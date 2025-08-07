@@ -7,7 +7,5 @@ def main():
     print(emoji.emojize(f"Output: {text}", language='alias'))
 
 
-main()
-
-#   check50 cs50/problems/2022/python/emojize
-#   submit50 cs50/problems/2022/python/emojize
+if __name__ == "__main__":
+    main()

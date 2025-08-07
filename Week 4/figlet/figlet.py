@@ -1,32 +1,34 @@
+# NOTE: For cleaner code, design to check conditions in order:
+#   1-  If it contains "-f" and 3 arguments
+#   2-  if so, check if it contains a valid font
+#   3-  After all conditions are met THEN prompt user for input
+
+#                        sys.argv[0]   sys.argv[1]    sys.argv[2] (font)
+#   Cmd line ->  python   figlet.py        -f            slant
+
+
 import sys
 from pyfiglet import Figlet
 
-figlet = Figlet()
-
-"""
-def main():
-    # txt_font = input("font: ") # doesn't work lmao
-    text = input("text: ")
-
-    # this is supposed to be "(font=f)" and then when we run the code "python figlet.py -f slant"
-    f = Figlet(font='trashman')
-    print(f.renderText(text))
-    # print(figlet.getFonts()) # gets list of fonts, is a bit slow
-"""
-
 
 def main():
-    try:
-        text = input("Input: ")
-        f = Figlet(font=f)
-        print(f.renderText(text))
+    figlet = Figlet()
 
-    except SystemError:
-        print("Invalid usage")
-        break
+    if len(sys.argv) == 3 and sys.argv[1] == "-f":
+        font = sys.argv[2]
+
+        if font not in figlet.getFonts():
+            sys.exit("Invalid usage")
+
+        figlet.setFont(font=font)
+
+    elif len(sys.argv) != 1:
+        sys.exit("Invalid usage")
+
+    text = input("Input: ")
+    print("Output:")
+    print(figlet.renderText(text))
 
 
-main()
-
-#   check50 cs50/problems/2022/python/figlet
-#   submit50 cs50/problems/2022/python/figlet
+if __name__ == "__main__":
+    main()
