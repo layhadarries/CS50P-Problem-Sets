@@ -31,6 +31,6 @@ def get_percentage():
         # Error is raised if the input is NOT an int or anything else
         except (ValueError, ZeroDivisionError):
             pass  # test return
-
+            
 
 main()
