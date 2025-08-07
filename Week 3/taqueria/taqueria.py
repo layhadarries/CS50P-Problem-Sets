@@ -27,6 +27,3 @@ def main():
 
 
 main()
-
-# check50 cs50/problems/2022/python/taqueria
-# submit50 cs50/problems/2022/python/taqueria

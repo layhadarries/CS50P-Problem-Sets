@@ -10,23 +10,16 @@ def main():
 
 
 def get_percentage():
-
-    #   We want to keep prompting the user for an input.
     while True:
         try:
             text = input("Fraction: ")
-            num, denom = text.split("/")
+            x, y = map(int, text.split("/"))
 
-            # Converts string into int. Need it to check if the input is not an int
-            x = int(num)
-            y = int(denom)
+            if x < 0:
+                continue
 
-            if y == 0:
-                raise ZeroDivisionError()
-            if y < 0:
-                raise ValueError()
-            if x > y:
-                raise ValueError()
+            if y == 0 or y < 0 or x > y:
+                continue
 
             return round(x / y * 100)  # round() handles floats
 
@@ -36,6 +29,3 @@ def get_percentage():
 
 
 main()
-
-# check50 cs50/problems/2022/python/fuel
-# submit50 cs50/problems/2022/python/fuel

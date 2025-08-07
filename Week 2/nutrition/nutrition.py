@@ -1,7 +1,7 @@
 def main():
     fruits = {
         "apple": "130",
-        "avacado": "50",
+        "avocado": "50",
         "banana": "110",
         "cantaloupe": "50",
         "grapefruit": "60",
@@ -20,14 +20,12 @@ def main():
         "sweet cherries": "100",
         "tangerine": "50",
         "watermelon": "80"
+    }
 
     text = input("Item: ").lower().strip()
 
     if text in fruits:
         print(f'Calories: {fruits[text]}')      # Prints the value of the key
-
-    if text in item:
-        print(f"Calories: {item[text]}")
 
 
 main()

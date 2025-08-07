@@ -1,5 +1,5 @@
 def main():
-    plate = input("Plate: ")
+    plate = input("Plate: ").strip().upper()
 
     if is_valid(plate):
         print("Valid")
@@ -10,32 +10,33 @@ def main():
 def is_valid(s):
     digit = False
 
-    if len(s) < 7 and len(s) > 1:           # Plate must be less that 6, more than 2
+    if len(s) < 7 and len(s) > 1:
 
-        if s.isalnum():                     # Plate must contain onlu numbers and letters
+        if s.isalnum():
 
-            if s[:2].isdigit():             # Must start with 2 LETTERS, no digits
+            if s[:2].isdigit() or not s[-1].isalpha() and not s[-1].isdigit():
                 return False
 
             else:
 
-                for char in s:                  # Checking each character in string
-                    if char.isdigit():          # If the character is a digit
-                        # If character is not digit (digit is not true)
-                        if not digit:
-                            if char == '0':     # If the character is 0
-                                return False    # False
-                            digit = True        # if char.isdigit() and digit is not false then digit should equal true
+                for i in range(len(s)):
+                    if s[i].isdigit():
 
-                        else:
-                            return True
+                        if not digit:
+                            if s[i] == '0':
+                                return False
+                            digit = True
+
+                    elif digit:
+                        return False
+
+                return True
+
         else:
             return False
+
     else:
         return False
 
 
 main()
-
-#   check50 cs50/problems/2022/python/plates
-#   submit50 cs50/problems/2022/python/plates

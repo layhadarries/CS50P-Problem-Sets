@@ -9,7 +9,7 @@ def main():
     amount_due = 50
 
     while amount_due > 0:
-        text = input("Insert coin: ")\
+        text = input("Insert coin: ")
 
         if text in coins:
             amount_due -= coins[text]
@@ -17,15 +17,11 @@ def main():
         if amount_due > 0:
             print(f'Amount due: {amount_due}')
 
-        if amount_due > 0:
-            print(f"Amount Due: {amount_due}")
-
         elif amount_due == 0:
-            print('Change owed: 0')
+            print('Change Owed: 0')
 
         else:
-            change = -amount_due - coins[text]
-            print(f'Change owed: {abs(change)}')
+            print(f'Change Owed: {abs(amount_due)}')
 
 
 main()

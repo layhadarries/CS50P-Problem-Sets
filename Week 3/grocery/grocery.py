@@ -1,7 +1,7 @@
 def main():
-    dict = {}    # add every input to an epmty dictionary
+    dict = {}    # add every input to an empty dictionary
 
-    while True:         # Loop
+    while True:
         try:
             item = input("").strip().upper()    # Return item in caps
 
@@ -17,7 +17,7 @@ def main():
 
             # sort Keys in dictionary alphabetically
             for item in sorted(dict):
-                print(f"{item}: {dict[item]}")
+                print(f'{dict[item]} {item}')
 
             break
 
@@ -25,5 +25,3 @@ def main():
 main()
 
 #    https://greenteapress.com/thinkpython2/html/thinkpython2012.html#sec131
-#    check50 cs50/problems/2022/python/grocery
-#   submit50 cs50/problems/2022/python/grocery
