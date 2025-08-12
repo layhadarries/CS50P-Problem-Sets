@@ -6,4 +6,4 @@ def test_upper():
 
 
 def test_lower():
-    assert shorten("Tweet") == "Twt"
+    assert shorten("TWEET") == "TWT"
