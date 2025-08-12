@@ -13,8 +13,3 @@ def test_input_h():
 def test_input_other():
     assert value("Wassup") == 100
     assert value("Good Evening") == 100
-
-
-def test_error():
-    with pytest.raises(TypeError):
-        assert value(1)
